@@ -1,0 +1,60 @@
+<div>
+    <div class="modal-header">
+        <h4 class="modal-title">Plan de mejoramiento</h4>
+    </div>
+    <div class="modal-body">
+        <form class="col-md-12">
+            <div class="form-row">
+                dskjghfkjlgsdafhkjbdsakjfhbvbdsafvlkdsabvlbdsalivjbslñAIBNVCLADKJSBVCLBSADV
+                IVBDJSANVIOPBSDBIVSPBDVPIBDNSVLIJBDSVLÑIJBSDLBVJIKNDSLFJIKVBLDKSAVBNLKDJSBVESA
+                ONVPIBHSDUFVBPBDSFVISBDVIPBDHSFVPIUDHSAFIPSDHAFIPOHSADIOUPFHADSNCIKPJSANCVNSAC
+                SPMKVPODJSFOIDHSAFIUSDHAIFHSDHFSDHFSADHFDHSAIDHSAPFHSA.
+                SDAOJFIOPDSAHFPIHADSFIPHSADFDHSAPDHSAIOUPFDSAHDSLIHGDSFLAIGHDSAFOLIHDSFIDSFADSF..
+            </div>
+            <div class="form-row">
+                <table class="table table-hover">
+                    <thead class="thead-dark">
+                        <th>C&oacute;digo</th>
+                        <th>Nombre</th>
+                        <th>Correctivo</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th>Corregido?</th>
+                        <th>Fecha de evaluaci&oacute;n</th>
+                        <th>Fecha limite de correcci&oacute;n</th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let impPlan of improvementPlan; let i = index">
+                            <td style="display:none;">{{impPlan.Id}}</td>
+                            <td>{{i + 1}}</td>
+                            <td>{{impPlan.Name}}</td>
+                            <td>{{impPlan.Action}}</td>
+                            <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect" (click)="ListImage(impPlan)">Descargar</button></td>
+                            <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect" (click)="ListImage(impPlan)">Ver</button></td>
+                            <td><button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect" (click)="UploadImage(impPlan)">Agregar</button></td>
+                            <td>
+                                <label class="container">
+                                    <input type="checkbox" [checked]="impPlan.Correction"
+                                        (change)="OnChangeImprovementPlan(impPlan)">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td>{{impPlan.DateSelfAppraisal}}</td>
+                            <td>{{impPlan.DateMaximumDate}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="form-row">
+                <div>
+                    <button type="button" class="btn btn-outline-dark"
+                        (click)="CancelImprovementPlan()">Cancelar</button>
+                </div>
+                <div class="form-group">
+                    <!-- <button class="btn btn-primary" style="justify-content: flex-end;" (click)="SaveSelfAppraisal()">Ver plan de mejoramiento</button> -->
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+.infoHome{    
+    background: black;
+}
+.infoHomeUno, .infoHomeDos, .infoHomeTres{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+}
+.ParrafHome{
+    margin-top: 30px;
+}
+.iconHome{
+    background: rgb(236, 236, 236);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    padding: 29px;
+    margin: auto;
+}
+.videoHome{
+    background: whitesmoke;
+    height: 383px;
+}
+.planesHome{
+    background: white;
+    /* height: 383px; */
+}
+.planObj{
+    display: flex;
+    justify-content: center;
+}
+.objUnit{
+    border-radius: 6px;    
+    margin: 80px 18px;
+    width: 342px;
+    box-shadow: 1px 1px 12px 0;
+}
+.imgPlanes{
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+.parrafVideo{
+    width: 350px;
+    margin-top: 55px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.youVideo{
+    background: wheat;
+    width: auto;
+    height: auto;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+}
+.carrusel{
+    height: 131px;
+    padding-top: 15px;
+}
+.sliceHome{
+    height: 390px; 
+    background-position: center
+}

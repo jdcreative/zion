@@ -1,0 +1,137 @@
+.ListService{
+    background-color:white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .ListService .block-heading {
+    padding-top: 50px;
+    margin-bottom: 40px;
+    text-align: center; 
+  }
+  .ListService .card-text {
+    text-align: justify;
+    padding-top: 5px;
+  }
+  
+  .ListService .card-title {
+    text-align: center;
+    padding-top: 5px;
+  }
+  .ListService .block-heading h3 {
+    color: #08298A;
+  }
+  
+  .ListService .block-heading p {
+    text-align: center;
+    max-width: 420px;
+    margin: auto;
+    opacity: 0.7; 
+  }
+  
+  .ListService .heading {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .ListService .item {
+    background-color: #ffffff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+    border-top: 5px solid #08298A;
+    overflow: hidden;
+    position: relative; 
+    text-align: center;
+    border-radius: 5px;     
+    
+  }
+  
+  .ListService .col-md-5:not(:last-child) .item {
+    margin-bottom: 30px; 
+  }
+  
+  .ListService .item button {
+    font-weight: 600; 
+    padding-top: 5px;
+  }
+  
+  .ListService .ribbon {
+    width: 160px;
+    height: 32px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0px 2px 3px rgba(136, 136, 136, 0.25);
+    background:#FE9A2E;
+    transform: rotate(45deg);
+    position: absolute;
+    right: -42px;
+    top: 20px;
+    padding-top: 7px;
+  }
+  
+  .ListService .item p {
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0.7; 
+  }
+  
+  .ListService .features .feature {
+    font-weight: 600; 
+  }
+  
+  .ListService.features h5 {
+    text-align: center;
+    font-size: 18px;
+    padding: 15px; 
+  }
+  
+  .ListService .precio h4 {
+    margin: 15px 0;
+    font-size: 40px;
+    text-align: center;
+    color: #FE9A2E; 
+  
+  } 
+  
+  .ListService .btn-secondary {
+    color:black;
+    background:#08298A;
+  }
+  
+  .ListService .buy-now button {
+    text-align: center;
+    margin: auto;
+    font-weight:600;
+    padding: 9px 0;
+  }
+  
+  .banner-1 {
+    width: 100%;
+    background: #08298A;
+    clear: both;
+    padding-top: 50px;
+    margin-bottom: 100px;
+    padding-bottom: 50px;
+    margin: auto;
+    text-align: center;
+    box-sizing: border-box;
+    transition: 0.4s;
+    margin-top: 20px;  
+  }
+  
+  .banner-1:hover {
+    background: #FE9A2E;
+    transition: 0.4s;
+  }
+  .banner-1 h4 {
+    color: #fff;
+    font-size:20px;
+  }
+  
+  .banner-1 a {
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+  }

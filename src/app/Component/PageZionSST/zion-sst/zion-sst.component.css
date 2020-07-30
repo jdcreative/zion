@@ -1,0 +1,39 @@
+.contImg{
+    background-image: url("../../../../assets/imgs/zion.jpg");
+    background-position: center;
+    
+    width: 110%;
+    height: 453px;    
+}
+.textImg{
+    position: absolute;
+    margin-top:138px;
+    color:whitesmoke;
+    margin-left: 42px;
+}
+.justimage {
+    max-width: 100%;
+    margin-top: 13px;
+}
+.ttSGzion{
+    margin:17px;
+    width: 55%;
+    margin-left: 52px;
+}
+.softgray{
+    margin:12px;
+    width:20%;
+}
+.objList{
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.boxPDf{
+    background: whitesmoke;
+    height: 50px;
+    text-align: center;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+

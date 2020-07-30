@@ -1,0 +1,39 @@
+
+.contImg{
+    background-image: url("../../../../assets/imgs/nosotros.jpg");
+    background-position: center;
+    
+    width: 110%;
+    height: 390px;    
+}
+.textImg{
+    position: absolute;
+    margin-top:138px;
+    color:whitesmoke;
+    margin-left: 42px;
+}
+.contInfo{
+    background: white;
+}
+.objUno{
+    width: 408px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.row{
+    height: 350px;
+}
+.people{
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    padding: 128px 0;
+}
+.unitPeople{
+    border-radius: 6px;    
+    margin: 14px;
+    width: 232px;
+    text-align: justify;    
+}

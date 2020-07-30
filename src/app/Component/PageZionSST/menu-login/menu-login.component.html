@@ -1,0 +1,23 @@
+
+    <nav class="navbar navbar-expand-lg navv    " >
+        <img src="assets/imgs/z6.jpg" style="width:158px;margin-left: 11px;" alt="logo zionsst">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarText">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ml-auto" (click)="EventLoginOrSingIn($event)">
+                <li class="nav-item" *ngIf="isLogin()">
+                    <a class="nav-link menues"><h5>{{name}}</h5></a>
+                </li>
+                <li class="nav-item item" *ngIf="!isLogin()">
+                    <a class="nav-link menues">Reg&iacute;strate</a>
+                </li>
+                <li class="nav-item item" *ngIf="!isLogin()">
+                    <a class="nav-link menues">Iniciar sesi&oacute;n</a>
+                </li>
+                <li class="nav-item item" *ngIf="isLogin()">
+                    <a class="nav-link menues">Cerrar sesi&oacute;n</a>
+                </li>
+            </ul>
+        </div>
+    </nav>

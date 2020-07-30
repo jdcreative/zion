@@ -1,0 +1,53 @@
+<div>
+    <div class="modal-header">
+        <h4 class="modal-title">Confirmar fechas</h4>
+    </div>
+    <div class="modal-body">
+        <form class="col-md-12">
+            <div class="form-row">
+                dskjghfkjlgsdafhkjbdsakjfhbvbdsafvlkdsabvlbdsalivjbslñAIBNVCLADKJSBVCLBSADV
+                IVBDJSANVIOPBSDBIVSPBDVPIBDNSVLIJBDSVLÑIJBSDLBVJIKNDSLFJIKVBLDKSAVBNLKDJSBVESA
+                ONVPIBHSDUFVBPBDSFVISBDVIPBDHSFVPIUDHSAFIPSDHAFIPOHSADIOUPFHADSNCIKPJSANCVNSAC
+                SPMKVPODJSFOIDHSAFIUSDHAIFHSDHFSDHFSADHFDHSAIDHSAPFHSA.
+                SDAOJFIOPDSAHFPIHADSFIPHSADFDHSAPDHSAIOUPFDSAHDSLIHGDSFLAIGHDSAFOLIHDSFIDSFADSF.
+            </div>
+            <div class="form-row">
+                <table class="table table-hover" id="TableTimeEstimation">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>C&oacute;digo</th>
+                            <th>Nombre</th>
+                            <th data-type="date" data-format-string="Do MMMM YYYY">Fecha Propuesta</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let self of selfAppraisal; let i = index">
+                            <td style="display:none;">{{self.Id}}</td>
+                            <td>{{i + 1}}</td>
+                            <td>{{self.Name}}</td>
+                            <td>
+                                {{self.DateMaximumDate}}
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect" (click)="EditDate(self)">Editar fecha</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="form-row">
+                <div>
+                    <button type="button" class="btn btn-outline-dark" (click)="CancelTimeEstimation()">Cancelar</button>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-success" (click)="behindSelfAppraisal()">Atras</button>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" style="justify-content: flex-end;" (click)="SaveSelfAppraisal()">Ver
+                        plan de mejoramiento</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

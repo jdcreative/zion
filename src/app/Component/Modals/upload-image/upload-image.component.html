@@ -1,0 +1,44 @@
+<div>
+    <div class="modal-header">
+        <h4 class="modal-title">Cargar evidencias</h4>
+        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+            &times;
+        </button>
+    </div>
+    <div class="modal-body">
+        <form class="col-md-12">
+            <div class="form-row">
+                <input style="display: none" type="file" multiple (change)="onFileSelected($event)"
+                    accept="application/pdf,image/*" #fileInput>
+                <button type="button" (click)="fileInput.click()">Seleccionar imagen</button>
+            </div>
+            <div class="form-row">
+                <h6>Recuerda cargar solo archivos de tipo im&aacute;genes o pdf.</h6>
+            </div>
+            <div class="form-row">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nombre Archivo</th>
+                            <th>Tamaño</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let file of selectedFile; let i = index">
+                            <td>{{file.name}}</td>
+                            <td>{{file.size / 1024 + ' KB'}}</td>
+                            <td>
+                                <button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"
+                                    (click)="onFileDelete(i)">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="form-row">
+                <button type="button" (click)="onUpload()">Cargar imagen</button>
+            </div>
+        </form>
+    </div>
+</div>

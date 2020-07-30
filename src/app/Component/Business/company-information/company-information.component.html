@@ -1,0 +1,112 @@
+<div>
+    <div class="modal-header">
+        <h4 class="modal-title">Completar informaciòn</h4>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="companyInformation" (ngSubmit)="Save" class="col-md-12">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <div class="form-group col-md-12">
+                        <label for="nit">Nit*</label>
+                        <input type="number" id="nit" placeholder="Nit" class="form-control"
+                            formControlName="nit" />
+                        <span style="color: red;"
+                            *ngIf="companyInformation.controls['nit'].touched && companyInformation.controls['nit'].errors?.required">El
+                            nit es requerido...</span>
+                        <span style="color: red;"
+                            *ngIf="companyInformation.controls['nit'].touched && companyInformation.controls['nit'].errors?.maxlength">El
+                            nit debe tener maximo 11 caracteres...</span>
+                        <span style="color: red;"
+                            *ngIf="companyInformation.controls['nit'].touched && companyInformation.controls['nit'].errors?.minlength">El
+                            nit debe tener minimo 10 caracteres...</span>
+                        <span style="color: red;"
+                            *ngIf="companyInformation.controls['nit'].touched && companyInformation.controls['nit'].errors?.pattern">El
+                            nit es inv&aacute;lido...</span>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="socialReason">Razòn social*</label>
+                        <input type="text" id="socialReason" placeholder="Razón social*" class="form-control"
+                            formControlName="socialReason" />
+                        <span style="color: red;"
+                            *ngIf="companyInformation.controls['socialReason'].touched && companyInformation.controls['socialReason'].errors?.required">La
+                            razòn social es requerida...</span>
+                        <span style="color: red;"
+                            *ngIf="companyInformation.controls['socialReason'].touched && companyInformation.controls['socialReason'].errors?.maxlength">El
+                            nit debe tener maximo 200 caracteres...</span>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="riskLevel">Nivel de riesgo*</label>
+                        <select id="riskLevel" class="form-control" formControlName="riskLevel">
+                            <option value="" disabled selected>Seleccione nivel de riesgo</option>
+                            <option *ngFor="let order of riskLevel; let i = index" [value]="riskLevel[i].Id">
+                                {{riskLevel[i].Name}}
+                            </option>
+                        </select>
+                        <span style="color: red;"
+                            *ngIf="companyInformation.controls['riskLevel'].touched && companyInformation.controls['riskLevel'].errors?.required">El
+                            nivel de riesgo es requerido...</span>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="typeCompany">Tipo de compañia*</label>
+                        <select id="typeCompany" class="form-control" formControlName="typeCompany">
+                            <option value="" disabled selected>Seleccione tipo de compañia</option>
+                            <option *ngFor="let order of typeCompany; let i = index" [value]="typeCompany[i].Id">
+                                {{typeCompany[i].Name}}
+                            </option>
+                        </select>
+                        <span style="color: red;"
+                            *ngIf="companyInformation.controls['typeCompany'].touched && companyInformation.controls['typeCompany'].errors?.required">El
+                            tipo de compañia es requerido...</span>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="countEmployee">Cantidad de empleados*</label>
+                        <input type="number" id="countEmployee" placeholder="Cantidad de empleados" class="form-control"
+                            formControlName="countEmployee" />
+                        <span style="color: red;"
+                            *ngIf="companyInformation.controls['countEmployee'].touched && companyInformation.controls['countEmployee'].errors?.required">La
+                            cantidad de empleados es requerida...</span>
+                        <span style="color: red;"
+                            *ngIf="companyInformation.controls['countEmployee'].touched && companyInformation.controls['countEmployee'].errors?.pattern">La
+                            cantidad de empleados es inv&aacute;lido...</span>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="activity">Actividad*</label>
+                        <input type="text" id="activity" placeholder="Actividad" class="form-control"
+                            formControlName="activity" />
+                        <span style="color: red;"
+                            *ngIf="companyInformation.controls['activity'].touched && companyInformation.controls['activity'].errors?.required">La
+                            actividad es requerida...</span>
+                        <span style="color: red;"
+                            *ngIf="companyInformation.controls['activity'].touched && companyInformation.controls['activity'].errors?.maxlength">La
+                            actividad debe tener maximo 300 caracteres...</span>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <button class="btn btn-primary" (click)="SaveCompany()" [disabled]="!companyInformation.valid">Guardar</button>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <h1>Mensaje</h1>
+                    <p>
+                        hnskaljhfkdljshflkdsfhgioluertkjbnkbdfidbsfgkjfbdnesgkjdbnflikhdfkgbnjdkljfbglbgdiu
+                        ñjdfhgiuphdfhdfgihdlfgbnligdhfiludhfgibdnfgiuhbdfgiuhdipghfdsfghbnlkjsbdnguehlgkfdn
+                        hnskaljhfkdljshflkdsfhgioluertkjbnkbdfidbsfgkjfbdnesgkjdbnflikhdfkgbnjdkljfbglbgdiu
+                        ñjdfhgiuphdfhdfgihdlfgbnligdhfiludhfgibdnfgiuhbdfgiuhdipghfdsfghbnlkjsbdnguehlgkfdn
+                        hnskaljhfkdljshflkdsfhgioluertkjbnkbdfidbsfgkjfbdnesgkjdbnflikhdfkgbnjdkljfbglbgdiu
+                        ñjdfhgiuphdfhdfgihdlfgbnligdhfiludhfgibdnfgiuhbdfgiuhdipghfdsfghbnlkjsbdnguehlgkfdn
+                        ñjdfhgiuphdfhdfgihdlfgbnligdhfiludhfgibdnfgiuhbdfgiuhdipghfdsfghbnlkjsbdnguehlgkfdn
+                    </p>
+                    <p>
+                        hnskaljhfkdljshflkdsfhgioluertkjbnkbdfidbsfgkjfbdnesgkjdbnflikhdfkgbnjdkljfbglbgdiu
+                        ñjdfhgiuphdfhdfgihdlfgbnligdhfiludhfgibdnfgiuhbdfgiuhdipghfdsfghbnlkjsbdnguehlgkfdn
+                        hnskaljhfkdljshflkdsfhgioluertkjbnkbdfidbsfgkjfbdnesgkjdbnflikhdfkgbnjdkljfbglbgdiu
+                        ñjdfhgiuphdfhdfgihdlfgbnligdhfiludhfgibdnfgiuhbdfgiuhdipghfdsfghbnlkjsbdnguehlgkfdn
+                        hnskaljhfkdljshflkdsfhgioluertkjbnkbdfidbsfgkjfbdnesgkjdbnflikhdfkgbnjdkljfbglbgdiu
+                        ñjdfhgiuphdfhdfgihdlfgbnligdhfiludhfgibdnfgiuhbdfgiuhdipghfdsfghbnlkjsbdnguehlgkfdn
+                        ñjdfhgiuphdfhdfgihdlfgbnligdhfiludhfgibdnfgiuhbdfgiuhdipghfdsfghbnlkjsbdnguehlgkfdn
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

@@ -1,0 +1,20 @@
+.contImg{
+    background-image: url("../../../../assets/imgs/preguntas.jpg");
+    background-position: center;
+    height: 390px;    
+}
+.textImg{
+    position: absolute;
+    margin-top:138px;
+    color:whitesmoke;
+    margin-left: 42px;
+}
+.contInfo{
+    background: white;
+
+}
+.cont-qst{
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}

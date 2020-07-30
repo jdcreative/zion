@@ -1,0 +1,282 @@
+<div>
+
+    <div class="modal-content">
+        <div class="modal-header" style="background: aliceblue;">
+            <h4 class="modal-title">Registro</h4>
+        </div>
+        <div class="modal-body">
+            <div class="container">
+                <!-- <form [formGroup]="singIn" (ngSubmit)="Save" class="col-md-12"> -->
+                <form [formGroup]="singIn" class="col-md-12">
+
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6 field">
+                            <label for="names" class="control-label" for="names">Nombres*</label>
+                            <div class="input-group ">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" id="names" placeholder="Nombres" class="form-control"
+                                    formControlName="names" aria-describedby="basic-addon1" />
+                            </div>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['names'].touched && singIn.controls['names'].errors?.required">
+                                Ingrese tu nombre</span>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['names'].touched && singIn.controls['names'].errors?.maxlength">El
+                                nombre debe tener maximo 40 caracteres...</span>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['names'].touched && singIn.controls['names'].errors?.pattern">El
+                                nombre no debe contener números...</span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6 field">
+                            <label for="lastName">Primer apellido*</label>
+                            <div class="input-group ">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" id="lastName" placeholder="Primer apellido" class="form-control"
+                                    formControlName="lastName" aria-describedby="basic-addon1" />
+                            </div>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['lastName'].touched && singIn.controls['lastName'].errors?.required">
+                                Ingrese tu primer apellido</span>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['lastName'].touched && singIn.controls['lastName'].errors?.maxlength">El
+                                primer apellido debe tener maximo 25 caracteres...</span>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['lastName'].touched && singIn.controls['lastName'].errors?.pattern">El
+                                primer apellido no debe contener n&uacute;meros...</span>
+                        </div>
+                        <div class="form-group col-md-6 field">
+                            <label for="secondSurname">Segundo apellido</label>
+                            <div class="input-group ">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="fas fa-user-plus"></i></span>
+                                </div>
+                                <input type="text" id="secondSurname" placeholder="Segundo apellido"
+                                    class="form-control" formControlName="secondSurname"
+                                    aria-describedby="basic-addon1" />
+                            </div>
+
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['secondSurname'].touched && singIn.controls['secondSurname'].errors?.maxlength">El
+                                segundo apellido debe tener maximo 25 caracteres...</span>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['secondSurname'].touched && singIn.controls['secondSurname'].errors?.pattern">El
+                                segundo apellido no debe contener n&uacute;meros...</span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6 field">
+                            <label for="idTypeDocument">Tipo de documento*</label>
+                            <select id="idTypeDocument" class="form-control custom-select"
+                                formControlName="idTypeDocument">
+                                <option value="" disabled selected>Seleccione tipo documento</option>
+                                <option *ngFor="let order of idTypeDocument; let i = index"
+                                    [value]="idTypeDocument[i].Id">
+                                    {{idTypeDocument[i].Description}}
+                                </option>
+                            </select>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['idTypeDocument'].touched && singIn.controls['idTypeDocument'].errors?.required">
+                                Seleccione un tipo de documento</span>
+                        </div>
+
+                        <div class="form-group col-md-6 field">
+                            <label for="document">N&uacute;mero de documento*</label>
+                            <div class="input-group ">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="far fa-credit-card"></i></span>
+                                </div>
+                                <input type="text" id="document" placeholder="Número de documento" class="form-control"
+                                    formControlName="document" aria-describedby="basic-addon1" />
+                            </div>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['document'].touched && singIn.controls['document'].errors?.required">
+                                Ingrese tu n&uacute;mero de documento</span>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['document'].touched && singIn.controls['document'].errors?.maxlength">El
+                                N&uacute;mero de documento debe tener maximo 12 caracteres...</span>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['document'].touched && singIn.controls['document'].errors?.pattern">El
+                                n&uacute;mero de documento es inv&aacute;lido...</span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6 field">
+                            <label for="numberPhone">N&uacute;mero de tel&eacute;fono*</label>
+
+                            <div class="input-group ">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-phone"></i></span>
+                                </div>
+                                <input type="text" id="numberPhone" placeholder="Número de teléfono"
+                                    class="form-control" formControlName="numberPhone"
+                                    aria-describedby="basic-addon1" />
+                            </div>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['numberPhone'].touched && singIn.controls['numberPhone'].errors?.required">
+                                Ingrese tu n&uacute;mero de tel&eacute;fono</span>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['numberPhone'].touched && singIn.controls['numberPhone'].errors?.maxlength">El
+                                n&uacute;mero de tel&eacute;fono debe tener maximo 30 caracteres...</span>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['numberPhone'].touched && singIn.controls['numberPhone'].errors?.pattern">El
+                                n&uacute;mero de tel&eacute; es inv&aacute;lido...</span>
+                        </div>
+
+                        <div class="form-group col-md-6 field">
+                            <label for="address">Direcci&oacute;n*</label>
+                            <div class="input-group ">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-home"></i></span>
+                                </div>
+                                <input type="text" id="address" placeholder="Dirección" class="form-control"
+                                    formControlName="address" aria-describedby="basic-addon1" />
+                            </div>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['address'].touched && singIn.controls['address'].errors?.required">
+                                Ingrese tu direcci&oacute;n</span>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['address'].touched && singIn.controls['address'].errors?.maxlength">La
+                                direcci&oacute;n debe tener maximo 200 caracteres...</span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6 field">
+                            <label for="email">Correo electr&oacute;nico*</label>
+                            <div class="input-group ">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="fas fa-envelope-open"></i></span>
+                                </div>
+                                <input type="text" id="email" placeholder="Correo electrónico" class="form-control"
+                                    formControlName="email" aria-describedby="basic-addon1" />
+                            </div>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['email'].touched && singIn.controls['email'].errors?.required">
+                                Ingrese tu correo electr&oacute;nico</span>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['email'].touched && singIn.controls['email'].errors?.maxlength">El
+                                correo electr&oacute;nico debe tener maximo 70 caracteres...</span>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['email'].touched && singIn.controls['email'].errors?.pattern">El
+                                correo electr&oacute;nico es inv&aacute;lido...</span>
+                        </div>
+                    </div>                    
+                    <hr>
+                    <br>
+                    <div class="form-row">
+                        <div class="form-group col-md-6 field">
+                            <label for="codeDane">Ciudad*</label>
+                            <select id="codeDane" class="form-control custom-select" formControlName="codeDane">
+                                <option value="" disabled selected>Seleccione ciudad</option>
+                                <option *ngFor="let order of codeDane; let i = index" [value]="codeDane[i].CodeDian">
+                                    {{codeDane[i].NameCity}}
+                                </option>
+                            </select>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['codeDane'].touched && singIn.controls['codeDane'].errors?.required">
+                                Seleccione una ciudad</span>
+                        </div>
+
+                        <div class="form-group col-md-6 field">
+                            <label for="departament">Departamento*</label>
+                            <select id="departament" class="form-control custom-select" formControlName="departament"
+                                (change)="getCity($event)">
+                                <option value="" disabled selected>Seleccione departamento</option>
+                                <option *ngFor="let order of departament; let i = index"
+                                    [value]="departament[i].CodeDepartament">
+                                    {{departament[i].NameDepartament}}
+                                </option>
+                            </select>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['departament'].touched && singIn.controls['departament'].errors?.required">
+                                Seleccione un departamento</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <br>
+                    <div class="form-row">
+                        <div class="form-group col-md-6 field">
+                            <label for="nickName">Usuario*</label>
+                            <div class="input-group ">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="fas fa-user-tag"></i></span>
+                                </div>
+                                <input type="text" id="nickName" placeholder="Usuario" class="form-control"
+                                    formControlName="nickName" aria-describedby="basic-addon1" />
+                            </div>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['nickName'].touched && singIn.controls['nickName'].errors?.required">
+                                Ingrese tu usuario</span>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['nickName'].touched && singIn.controls['nickName'].errors?.maxlength">El
+                                usuario debe tener maximo 20 caracteres...</span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6 field">
+                            <label for="password">Contraseña*</label>
+                            <div class="input-group ">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-key"></i></span>
+                                </div>
+                                <input type="password" id="password" placeholder="Contraseña" class="form-control"
+                                    formControlName="password" aria-describedby="basic-addon1" />
+                            </div>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['password'].touched && singIn.controls['password'].errors?.required">
+                                Ingrese tu contraseña</span>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['password'].touched && singIn.controls['password'].errors?.maxlength">La
+                                contraseña debe tener maximo 20 caracteres...</span>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['password'].touched && singIn.controls['password'].errors?.minlength">La
+                                contraseña debe tener minimo 8 caracteres...</span>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['password'].touched && singIn.controls['password'].errors?.pattern && !singIn.controls['password'].errors?.minlength">La
+                                contraseña es muy insegura...</span>
+                        </div>
+                        <div class="form-group col-md-6 field">
+                            <label for="repeatPassword">Repetir contraseña*</label>
+                            <div class="input-group ">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-key"></i></span>
+                                </div>
+                                <input type="password" id="repeatPassword" placeholder="Repetir contraseña"
+                                    class="form-control" formControlName="repeatPassword" appConfirmValidator="password"
+                                    aria-describedby="basic-addon1" />
+                            </div>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['repeatPassword'].touched && singIn.controls['repeatPassword'].errors?.required">
+                                Ingrese tu contraseña</span>
+                            <span style="color: red;"
+                                *ngIf="singIn.controls['repeatPassword'].touched && singIn.controls['repeatPassword'].notEqual">
+                                Las contraseñas no son iguales...</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer" style="background: aliceblue;">
+            <!-- <button type="button" class="btn btn-outline-dark"
+                        (click)="activeModal.close('Close click')">Cancelar</button> -->
+            <button type="button" class="btn btn-secondary"
+                (click)="activeModal.dismiss('Cross click')">Cancelar</button>
+            <button class="btn btn-primary" (click)="SaveUser()" >Guardar</button>
+        </div>
+    </div>
+</div>

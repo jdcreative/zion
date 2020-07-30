@@ -1,0 +1,83 @@
+@font-face{
+    font-family: tuffy;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../../../../assets/fonts/Tuffy-Regular.ttf);
+    /* src: url(UmbaSans-ThinDemo.otf); */
+}
+.text{
+    font-size: 23px;    
+    color:white;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+.titleMp{
+    letter-spacing: 2px;
+}
+.parrafText{
+    letter-spacing: 2px;
+    line-height: 0px;
+    margin-top: 29px;    
+}
+.iconsRds{    
+    font-size: 17px; 
+    margin: 7px;
+}
+.principalIconsRds{
+    display: flex;
+    margin-left: 57px;
+}
+.boxIcons{
+    background: #363637 ;
+    border-radius: 50%;
+    margin-right: 4px;
+    padding: 7px;
+    width: 44px;
+    height: 40px;
+}
+.paragrafoot{
+    font-size: 14px;
+    color: rgb(218, 218, 218);
+    text-align: center;
+    width: 310px;
+    margin-top: -11px;
+}
+.paragrafoot2{
+    font-size: 14px;
+    color: white;
+    text-align: left;
+}
+.formMini{
+    margin-top: 13px;
+    height: 21px;
+    background: #2f2f2e;
+    margin-bottom: 9px;
+    width: 250px;
+    border-color: #2f2f2e;
+    font-size: 13px;
+    color: rgb(218, 218, 218);
+}
+.buttonFooter{
+    width: 65px;
+    height: 30px;
+    font-size: 11px;
+    margin-left: 6px;
+    background: white;
+    color:#2f2f2e;
+}
+.dateFooter, .mapaFooter, .contacFooter{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 74px;
+    font-family: tuffy;
+}
+.iconWaze{
+    width: 240px;
+    height: 40px;
+    background: #D0D1D5;
+    border-radius: 8px;
+    text-align: center;
+    color: black;
+    letter-spacing: 2px;
+    padding-top: 4px;
+}

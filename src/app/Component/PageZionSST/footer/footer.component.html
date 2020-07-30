@@ -1,0 +1,105 @@
+<div style="background: black;">
+<div class="container" style="background-color: #212121 ; color:#fff">
+    <footer class="" >
+        <div class="container text-center text-md-left">
+            <div class="row ">
+                <!-- footer section Mesagge and Adress  -->
+                <div class="contacFooter">
+                    <h4 class="text-uppercase font-weight-bold" style="    letter-spacing: 2px;">CONTACTO</h4>
+                    <h5 style="letter-spacing: 1px;line-height: 0px;">Bogot&aacute;, Colombia</h5>
+                    <p class="paragrafoot2">Avenida Carrera 30 #78-55</p>
+                    <div>
+                        <form class="">
+                            <div class="form-group ">
+                                <input type="email" class="form-control formMini" id="InputEmailFooter"
+                                    placeholder="Correo Electronico">
+                                <input type="text" class="form-control formMini" id="InputNameFooter"
+                                    placeholder="Nombre">
+                                <textarea type="text" rows="8" id="Message" placeholder="Dejanos tu Mensaje"
+                                    class="form-control formMini" style="height: 83px;"></textarea>
+                            </div>
+                        </form>
+                        <div class="form-row">
+                            <button type="submit" class="btn btn-dark buttonFooter">ENVIAR</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- footer section Site Map -->
+                <div class="mapaFooter" *ngIf="!isLogin()">
+                    <h4 class="titleMp">Mapa del sitio</h4>
+                    <br>
+                    <p class="parrafText">
+                        <a class="text" routerLink="/">- Inicio</a>
+                    </p>
+                    <p class="parrafText">
+                        <a class="text" routerLink="We">- Nosotros</a>
+                    </p>
+                    <p class="parrafText">
+                        <a class="text" routerLink="zionsst">- ZionSST</a>
+                    </p>
+                    <p class="parrafText">
+                        <a class="text" routerLink="frequentQuestions">- Preguntas frecuentes</a>
+                    </p>
+                    <p class="parrafText">
+                        <a class="text" routerLink="contactUs">- Contacto</a>
+                    </p>
+                    <div class="iconWaze" > Llega m&aacute;s f&aacute;cil 
+                        <a href="https://www.waze.com/ul?ll=4.67249070%2C-74.06960080&navigate=yes">
+                            <img src="..//..//..//..//assets/imgs/waze.png" style="width: 30px;height: 30px; margin-right: 3px;" >                         
+                        </a> 
+                        <a href="https://goo.gl/maps/FUkrn4hU3kzCMrCSA">
+                            <img src="..//..//..//..//assets/imgs/google.png" style="width: 30px;height: 30px; margin-left: 3px;">   
+                        </a>                                               
+                    </div>
+                </div>
+                <!-- footer section Contact dates -->
+                <div class="dateFooter">
+                    <img src="..//..//..//..//assets/imgs/z6.jpg" style="width: 111px;height: 50px;margin-left: 98px;">
+                    <p class="paragrafoot" style="margin-top: 15px;">
+                        Conectate mediante tu navegador y podr&aacute;s hacer uso de la licencia de SGSST en
+                        l&iacute;nea, soporte,
+                        actualizaciones, mantenimiento, garant&iacute;a y seguridad adem&aacute;s de contar con
+                        servicios de asesor&iacute;a
+                        y
+                        consultor&iacute;a.
+                    </p>
+                    <p class="paragrafoot">
+                        <i class="far fa-envelope" style="margin-right: 8px;"></i> zionsst@zion.co
+                    </p>
+                    <p class="paragrafoot">
+                        <i class="fas fa-phone-alt"  style="margin-right: 8px;"></i> (57)+1 3651201
+                    </p>
+                    <p class="paragrafoot">
+                        <i class="fas fa-mobile-alt"  style="margin-right: 8px;"></i> (+57) 310 312 4100
+                    </p>
+                    <div class=" text-md-right principalIconsRds">
+                        <div class="boxIcons">
+                            <span class="tw-ic iconsRds">
+                                <i class="fab fa-instagram"></i>
+                            </span>
+                        </div>
+                        <div class="boxIcons">
+                            <span class="fb-ic iconsRds" >
+                                <i class="fab fa-facebook-f"></i>
+                            </span>
+                        </div>
+                        <div class="boxIcons">
+                            <span class="ins-ic iconsRds">
+                                <i class="fab fa-twitter"></i>
+                            </span>
+                        </div>
+                        <div class="boxIcons">
+                            <span class="li-ic iconsRds">
+                                <i class="fab fa-linkedin-in"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center text-black-50">© {{year}} Copyright:
+            <a><strong>zionSST</strong></a>
+        </div>
+    </footer>
+</div>
+</div>

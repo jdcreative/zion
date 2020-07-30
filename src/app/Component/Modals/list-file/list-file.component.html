@@ -1,0 +1,33 @@
+<div>
+    <div class="modal-header">
+        <h4 class="modal-title">Lista de evidencia</h4>
+        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+            &times;
+        </button>
+    </div>
+    <div class="modal-body">
+        <form class="col-md-12">
+            <div class="form-row">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nombre Archivo</th>
+                            <th>Tamaño</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let file of listFiles; let i = index">
+                            <td>{{file.Name}}</td>
+                            <td>{{file.Size / 1024 + ' KB'}}</td>
+                            <td>
+                                <button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"
+                                    (click)="deleteFile(file, i)">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </div>
+</div>

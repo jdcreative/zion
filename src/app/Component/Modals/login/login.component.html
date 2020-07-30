@@ -1,0 +1,46 @@
+<div>
+    <div class="modal-content">
+        <div class="modal-header" style="background: rgb(241, 250, 245);">
+            <h4 class="modal-title">Inicio de sesión</h4>
+        </div>
+        <div class="modal-body">
+            <br>    
+            <form [formGroup]="login" (ngSubmit)="onSubmit(login)" style="width: 85%; margin: auto;">
+                <div class="form-group field">
+                    <label data-error="wrong" data-success="right" for="defaultForm-email">&nbsp; Usuario</label>
+                    <div class="input-group ">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-user-tag"></i></span>
+                        </div>
+                        <input type="text" formControlName="nickName" class="form-control"
+                            aria-describedby="basic-addon1" />
+                    </div>
+                    <span style="color: red;"
+                        *ngIf="login.controls['nickName'].touched && login.controls['nickName'].errors?.required">El
+                        usuario es requerido...</span>
+                </div>
+                <div class="form-group field">
+                    <label data-error="wrong" data-success="right" for="defaultForm-pass">&nbsp; Contraseña</label>
+                    <div class="input-group ">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input type="password" formControlName="password" class="form-control"
+                            aria-describedby="basic-addon1" />
+                    </div>
+                    <span style="color: red;"
+                        *ngIf="login.controls['password'].touched && login.controls['password'].errors?.required">La
+                        contraseña es requerida...</span>
+                </div>
+                <div class="form-group d-flex justify-content-center">
+                    <div *ngIf="error">
+                        <span style="color: red;">{{error}}</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer" style="background: rgb(241, 250, 245);">
+            <button type="submit" class="btn btn-success" [disabled]="!login.valid">Iniciar sesión</button>
+        </div>
+    </div>
+</div>

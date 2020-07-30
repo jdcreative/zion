@@ -1,0 +1,125 @@
+<div style="background: black;">
+    <div class="container contImg">
+        <div class="textImg">
+            <h1 style="font-weight: bold;font-size: 90px;text-shadow:0px 0px 7px rgba(0,0,0,0.65);">CONTACTANOS</h1>
+            <h1 style="font-size: 40px;text-shadow:0px 0px 7px rgba(0,0,0,0.65);">Contactanos</h1>
+        </div>
+    </div>
+    <div class="container contInfo">
+        <div class="row">
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1988.4776249476154!2d-74.08016096607672!3d4.602037389237778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99098822d0f3%3A0x6a0be1ecc34a1473!2sCl.%2012%20%2312-20%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1573869946081!5m2!1ses!2sco"
+                    width="100%" height="370" frameborder="0" style="border:0;" allowfullscreen="">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="container contInfo">
+        <div class="row">
+            <div class="contact-info">
+                <div class="contact-info">
+                    <img src="https://image.ibb.co/kUASdV/contact-image.png" width="40" alt="image" />
+                    <h6 style="font-weight: bold;">ACERCA DE NUESTRA COMPAÑIA</h6>
+                    <h6>Para nosotros es un gusto estar en cantacto con nuestros clientes, déjanos tus dudas,
+                        requerimientos.Para nosotros es un gusto estar en cantacto con nuestros clientes, déjanos tus dudas,
+                        requerimientos.Para nosotros es un gusto estar en cantacto con nuestros clientes, déjanos tus dudas,
+                        requerimientos
+                        o mensajes en este formulario.</h6>
+                </div>
+                <br><br>
+                <div>
+                    <h6 style="font-weight: bold;">SIGUENOS EN NUESTRAS REDES SOCIALES</h6>
+                    <div class=" text-md-right principalIconsRds">
+                            <div class="boxIcons">
+                                <span class="tw-ic iconsRds">
+                                    <i class="fab fa-instagram"></i>
+                                </span>
+                            </div>
+                            <div class="boxIcons">
+                                <span class="fb-ic iconsRds">
+                                    <i class="fab fa-facebook-f"></i>
+                                </span>
+                            </div>
+                            <div class="boxIcons">
+                                <span class="ins-ic iconsRds">
+                                    <i class="fab fa-twitter"></i>
+                                </span>
+                            </div>
+                            <div class="boxIcons">
+                                <span class="li-ic iconsRds">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </span>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form [formGroup]="contact" (ngSubmit)="sendMessage(contact)" style="margin-top: 10px;">
+                    <div class="form-row">
+                            <h6 style="font-weight: bold;">DEJANOS UN MENSAJE</h6>
+                        <div class="form-group field">
+                            <div class="input-group input-size">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" id="Name" placeholder="Nombres" class="form-control"
+                                    formControlName="Name" aria-describedby="basic-addon1"
+                                    style="    background: #e9ecef;" />
+                            </div>
+                            <span style="color: red;"
+                                *ngIf="contact.controls['Name'].touched && contact.controls['Name'].errors?.required">
+                                Ingrese tu nombre</span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group  field">
+                            <div class="input-group input-size">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-phone"></i></span>
+                                </div>
+                                <input type="text" id="Phone" placeholder="Teléfono" class="form-control"
+                                    formControlName="Phone" aria-describedby="basic-addon1"
+                                    style="background: #e9ecef;" />
+                            </div>
+                            <span style="color: red;"
+                                *ngIf="contact.controls['Phone'].touched && contact.controls['Phone'].errors?.required">
+                                Ingresa tu tel&eacute;fono</span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group field">
+                            <div class="input-group input-size">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="fas fa-envelope-open"></i></span>
+                                </div>
+                                <input type="text" id="EmailContact" placeholder="Correo de contacto"
+                                    class="form-control" formControlName="EmailContact" aria-describedby="basic-addon1"
+                                    style="background: #e9ecef;" />
+                            </div>
+                            <span style="color: red;"
+                                *ngIf="contact.controls['EmailContact'].touched && contact.controls['EmailContact'].errors?.required">
+                                Ingrese tu correo de contacto</span>
+                        </div>
+                    </div>
+                    <div class="form-row ">
+                        <div class="form-group input-size">
+                            <textarea type="text" rows="5" id="Message" placeholder="Mensaje" class="form-control"
+                                formControlName="Message" style="background: #e9ecef;"></textarea>
+                            <span style="color: red;"
+                                *ngIf="contact.controls['Message'].touched && contact.controls['Message'].errors?.required">
+                                Ingrese tu mensaje</span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" class="btn"  [disabled]="!contact.valid"
+                            style="width: 150px; background:#4870B8; color:white; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
